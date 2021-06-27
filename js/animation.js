@@ -45,7 +45,7 @@ for(let button of introButtons){
 }
 
 $(".nav_item").on('click', function(event){
-    console.log(this.dataset.bg);
+    //console.log(this.dataset.bg);
     if(this.dataset.bg !=""){
         event.preventDefault();
         var des = this.dataset.bg;
@@ -133,7 +133,7 @@ function change_background(){
 }
 
 var articles =  document.querySelectorAll(".article");
-console.log("articles:",articles);
+//console.log("articles:",articles);
 
 function text_appear(articles){
     var delay = 0;
@@ -141,19 +141,19 @@ function text_appear(articles){
     for(let i = 0 ; i < articles.length; i++){
         children_list[i] = articles[i].children;
         //console.log("in article event", children_list);
-        console.log("this id:", articles[i].id);
+        //console.log("this id:", articles[i].id);
         var article_top = $(`#${articles[i].id}.article`).offset().top;
         var article_bottom = article_top + $(`#${articles[i].id}.article`).outerHeight();
         var viewportTop = $(window).scrollTop();
         var viewportBottom = viewportTop + $(window).height();
         var id_num = parseInt(articles[i].id[1]);
-        console.log("idnumber:",id_num);
-        console.log("in appear",article_top,"and",viewportBottom );
+        //console.log("idnumber:",id_num);
+        //console.log("in appear",article_top,"and",viewportBottom );
         if(article_top < viewportBottom || article_bottom > viewportTop){
-            console.log("in appear for", children_list);
+            //console.log("in appear for", children_list);
             for(let j = 0; j < children_list[i].length; j ++){
                 if(parseInt(children_list[i][j].id[1]) != id_num) continue;
-                console.log("in loop",children_list[i][j]);
+                //console.log("in loop",children_list[i][j]);
                 setTimeout(()=>{
                     //console.log(children_list[i][j]);
                     children_list[i][j].classList.add("appear");
