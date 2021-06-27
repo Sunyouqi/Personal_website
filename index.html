@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+
+<head>
+    <title> Youqing's Website </title>
+
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+        integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
+    <script src="https://kit.fontawesome.com/3a9994108b.js" crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+
+</head>
+
+<body>
+    <span class="name">
+        <h1> YOUQING SUN </h1>
+    </span>
+    <div class="bg-intro"></div>
+    <div class="bg-skills">
+
+    </div>
+    <div class="bg-experience">
+        <div class="experience-title"> Experience </div>
+        <div class = "main-branch"></div>
+        <div class="left-tree">
+
+
+            <div class="tree-node" id="node1">
+                <div class = "time-label" id = "label1"> 2016 &nbsp;Sept  </div>
+                <div class="tree-branch" id="n1">
+                    <div class="experience" id="e1">
+                        <div class = "article-image" id = "ai1"></div>
+                        <div class = "article-title" id = "at1"> Post Secondary Education </div>
+                        <div class="article" id = "a1">
+                            <div class="animated-text" id = "t1"> University </div>
+                            <div class="animated-text" id = "t1"> of </div>
+                            <div class="animated-text" id = "t1"> Toronto </div>
+                            <div class="animated-text" id = "t1"> Graduated </div>
+                        </div>
+                        <div class="article" id = "a1">
+                            <div class="animated-text" id = "t1"> from </div>
+                            <div class="animated-text"  id = "t1"> 2016 </div>
+                            <div class="animated-text" id = "t1"> to </div>
+                            <div class="animated-text" id = "t1"> 2021 </div>
+                        </div>
+                        <div class="article" id = "a1">
+                            <div class="animated-text" id = "t1"> Computer </div>
+                            <div class="animated-text" id = "t1"> Engineer </div>
+                            <div class="animated-text" id = "t1"> Major </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="right-tree">
+            <div class="tree-node" id="node2">
+                <div class = "time-label"> 2014 Sept  </div>
+                <div class="tree-branch" id="n2">
+                    <div class="experience" id="e2">
+                        <div class = "article-title" id = "at1"> British Columbia Academic </div>
+                        <div class = "article-image" id = "ai2"></div>
+                        <div class="article" id = "a2">
+                            <div class="animated-text" id = "t2"> Nanjing </div>
+                            <div class="animated-text" id = "t2"> Foreign </div>
+                            <div class="animated-text" id = "t2"> Language </div>
+                            <div class="animated-text" id = "t2"> School </div>
+                        </div>
+                        <div class="article" id = "a2">
+                            <div class="animated-text" id = "t2"> from </div>
+                            <div class="animated-text" id = "t2"> 2014 </div>
+                            <div class="animated-text" id = "t2"> to </div>
+                            <div class="animated-text" id = "t2"> 2016 </div>
+                        </div>
+                        
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+    <div class="background"></div>
+    <div class="footer">
+        <div class="contact-infor">
+            <a href="https://github.com/Sunyouqi" class="github-link"><i class="bi bi-github hlink">
+                    &nbsp;&nbsp;https://github.com/Sunyouqi </i></a>
+
+            <a href="https://www.linkedin.com/in/youqing-sun-8868b6189/" class="linkedin-link"><i
+                    class="bi bi-linkedin hlink"> &nbsp;&nbsp;https://www.linkedin.com/in/youqing-sun-8868b6189/</i></a>
+            <a href="https://www.facebook.com/yilu.gu.5/" class="linkedin-link"><i class="bi bi-facebook hlink">
+                    &nbsp;&nbsp;https://www.facebook.com/yilu.gu.5/</i></a>
+            <i class="copy-right"> &copy; Copyright Youqing Sun. all rights reserved</i>
+        </div>
+    </div>
+    <span class="rating-board">
+        <ul class="rating">
+            <li class="glyphicon glyphicon-star"> </li>
+            <li class="glyphicon glyphicon-star"> </li>
+            <li class="glyphicon glyphicon-star"> </li>
+            <li class="glyphicon glyphicon-star"> </li>
+            <li class="glyphicon glyphicon-star"> </li>
+
+        </ul>
+    </span>
+
+    <nav class="navigation_bar">
+        <ul class="nav_list">
+            <li id="intro" data-bg=".bg-intro" data-modal=".modal-introduction" class="nav_item"> introduction </li>
+            <li data-bg=".bg-skills" class="nav_item"> skills </li>
+            <li data-bg=".bg-experience" class="nav_item"> experience </li>
+            <li  class="nav_item"> resume </li>
+
+
+        </ul>
+    </nav>
+    <div class="loader-wrapper">
+        <span class="loader"><span class="loader-inner"></span></span>
+    </div>
+
+    <div class="modal-introduction">
+        <div class="modal-head">
+            <div class="modal-title"> Modal </div>
+            <div data-modal=".modal-introduction" class="CloseModal"> <span id="close-span">&#x2715; </span> </div>
+
+
+        </div>
+        <div class="modal-text">
+            Hi, I am Youqing. I graduated from University of Toronto 2021 and my major was Computer Engineering. I am a
+            gaming enthusiast and I am starting my career in computer industry.
+        </div>
+    </div>
+
+</body>
+<script src="js/animation.js"></script>
+
+</html>
