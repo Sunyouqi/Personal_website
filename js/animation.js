@@ -53,6 +53,9 @@ $(".nav_item").on('click', function(event){
             scrollTop: $(des).offset().top
           }, 0);
         }
+    if(this.dataset.modal == null){
+        closeModal(document.querySelector(".modal-introduction"));
+    }
 });
 
 for(let button of close_buttons){
@@ -135,60 +138,7 @@ function change_background(){
 var articles =  document.querySelectorAll(".article");
 //console.log("articles:",articles);
 
-function text_appear(articles){
-    var delay = 0;
-    var children_list = Array.from({length: articles.length}, e => 0);
-    for(let i = 0 ; i < articles.length; i++){
-        children_list[i] = articles[i].children;
-        //console.log("in article event", children_list);
-        //console.log("this id:", articles[i].id);
-        var article_top = $(`#${articles[i].id}.article`).offset().top;
-        var article_bottom = article_top + $(`#${articles[i].id}.article`).outerHeight();
-        var viewportTop = $(window).scrollTop();
-        var viewportBottom = viewportTop + $(window).height();
-        var id_num = parseInt(articles[i].id[1]);
-        //console.log("idnumber:",id_num);
-        //console.log("in appear",article_top,"and",viewportBottom );
-        if(article_top < viewportBottom || article_bottom > viewportTop){
-            //console.log("in appear for", children_list);
-            for(let j = 0; j < children_list[i].length; j ++){
-                if(parseInt(children_list[i][j].id[1]) != id_num) continue;
-                //console.log("in loop",children_list[i][j]);
-                setTimeout(()=>{
-                    //console.log(children_list[i][j]);
-                    children_list[i][j].classList.add("appear");
-                }, delay);
-                delay += 20;
-            }
-        }
-    }
-};
-function text_disappear(articles){
-    var delay = 0;
-    var children_list = Array.from({length: articles.length}, e => 0);
-    for(let i = 0 ; i < articles.length; i++){
-        children_list[i] = articles[i].children;
-        
-        var id_num = parseInt(articles[i].id[1]);
-        var article_top = $(`#${articles[i].id}.article`).offset().top;
-        var article_bottom = article_top + $(`#${articles[i].id}.article`).outerHeight();
-        var viewportTop = $(window).scrollTop();
-        var viewportBottom = viewportTop + $(window).height();
 
-        if(article_top + 100 > viewportBottom  || article_bottom - 240  < viewportTop){
-            for(let j = 0; j < children_list[i].length; j ++){
-                if(parseInt(children_list[i][j].id[1]) != id_num) continue;
-                console.log("in article event disappear", children_list[i][j]);
-                //console.log(children_list[i][j]);
-                setTimeout(()=>{
-                    //console.log(children_list[i][j]);
-                    children_list[i][j].classList.remove("appear");
-                }, delay);
-                delay += 20;
-            }
-        }
-    }
-};
 
 
 function crop_top_bottom(){
@@ -251,14 +201,28 @@ function extand(){
     else{
         $("#n2").removeClass("expand");
     }
+    var item2_pos = $("#node3").offset().top + $("#node2").outerHeight();
+    if(item2_pos < viewportBottom - 100 && item2_pos > viewportTop + 150){
+        $("#node3").addClass("appear");
+    }
+    else{
+        $("#node3").removeClass("appear");
+    }
+    if(item2_pos < viewportMiddle + 250 && item2_pos > viewportMiddle - 240) {
+        $("#n3").addClass("expand");
+        //console.log($("#n2"));
+    }
+    else{
+        $("#n3").removeClass("expand");
+    }
 }
 
 window.onscroll = function(){
     Test_window_position(windowPosition);
     shrinkName();
     change_background();
-    text_appear(articles);
-    text_disappear(articles);
+    //text_appear(articles);
+    //text_disappear(articles);
     crop_top_bottom();
     extand();
 };
