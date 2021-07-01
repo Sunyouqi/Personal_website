@@ -30,7 +30,7 @@ var close_buttons = document.querySelectorAll(".CloseModal");
 var introButtons = document.querySelectorAll(".nav_item");
 
   
-
+/*
 for(let button of introButtons){
     button.addEventListener("click", (eventHandle)=>{
         var target = eventHandle.target;
@@ -42,7 +42,7 @@ for(let button of introButtons){
         openModal(modal);
     });
     
-}
+}*/
 
 $(".nav_item").on('click', function(event){
     //console.log(this.dataset.bg);
