@@ -4,6 +4,43 @@ html{
 a:hover{
   text-decoration: none;
 }
+.selfie{
+  position: absolute;
+  top: 10vw;
+  left: 38%;
+  width: 18vw;
+  height: 18vw;
+  border-radius: 50%;
+  border: 1px solid blue;
+  background: url(../image/image_2.jpg);
+  background-size: cover;
+  background-position: 50% 30%;
+  background-repeat: no-repeat;
+}
+.chiffon{
+  position: absolute;
+  top: 10%;
+  left: 10%;
+  width: 80%;
+  height: 80%;
+  background: #eeeff0;
+  opacity: 0.2;
+  background-size: 100% 100%;
+     
+  filter:brightness(0.8);  
+}
+.frame{
+  position: absolute;
+  top: 10%;
+  left: 10%;
+  width: 80%;
+  height: 80%;
+  background: none;
+  z-index: -1;
+  background-size: 100% 100%;
+     
+   
+}
 .paper{
   position: absolute;
   top: 10%;
@@ -12,7 +49,8 @@ a:hover{
   height: 80%;
   background: url(../image/paper.jpeg);
   background-size: 100% 100%;
-  opacity: 1 !important;                              
+  opacity: 1 !important;       
+  filter:brightness(1.1);                       
 
 }
 .contact-infor{
@@ -126,8 +164,8 @@ a:hover{
   position:absolute;
   left: 0;
   top: 100%;
-  background: url("../image/wooden_image_darken.jpeg");
-  filter: brightness(0.7);
+  background: url("../image/dark.jpeg");
+  
   width: 100%;
   height: 100vh;
   background-size: 100% 100%;
@@ -213,10 +251,10 @@ a:hover{
 }
 .right-tree{
   position: absolute;
-  left: 51%;
+  left: 49.75%;
   background: none;
   top: 250px;
-  width: 40%;
+  width: 10px;
   height: 200vh;
   z-index: 0;
   border-right: 10px solid none;
@@ -225,9 +263,9 @@ a:hover{
 }
 .left-tree{
   position: relative;
-  left: 50.25%;
+  left: 49.75%;
   top: 160px;
-  width: 0;
+  width: 10px;
   height: 156vh;
   z-index: 1;
   border-right: 10px solid none;
@@ -307,7 +345,7 @@ a:hover{
   border: 1px solid black;
   background: white;
   width: 100%;
-  height: 38vw;
+  height: 42vw;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -319,7 +357,7 @@ a:hover{
   top: 0px;
   border: 0px solid black;
   background: white;
-  height: 580px;
+  height: 45vw;
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -332,7 +370,7 @@ a:hover{
   top: 0px;
   border: 0px solid black;
   background: white;
-  height: 580px;
+  height: 42vw;
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -340,7 +378,7 @@ a:hover{
 }
 #n1.tree-branch{
   position: absolute;
-  width: 33vw;
+  width: 32vw;
   height: 5px;
   left: -34vw;
   top: 20px;
@@ -354,7 +392,7 @@ a:hover{
 }
 #n2.tree-branch{
   position: absolute;
-  width: 500px;
+  width: 32vw;
   height: 0;
   left: 84px;
   top: 20px;
@@ -368,7 +406,7 @@ a:hover{
 }
 #n3.tree-branch{
   position: absolute;
-  width: 500px;
+  width: 32vw;
   height: 0;
   left: 84px;
   top: 20px;
@@ -382,7 +420,7 @@ a:hover{
 #node3.tree-node{
   position: absolute;
   top: 980px;
-  left: -46px;
+  left: -290%;
   height: 65px;
   width: 65px;
   border:2px solid none;
@@ -393,7 +431,7 @@ a:hover{
   transition: 300ms ease;
   display: flex;
   text-align: center;
-  cursor: pointer;
+  
   padding: 8px 0 0 0;
   
 }
@@ -436,14 +474,14 @@ a:hover{
 #node2.tree-node{
   position: absolute;
   top: 100px;
-  left: -46px;
+  left: -290%;
   height: 65px;
   width: 65px;
   border:2px solid none;
   border-radius: 50%;
   background: radial-gradient(circle at 10% 80%, #f6ba81, #db8d4c 10%, #e74fc6 80%, #e90e57 100%);
   z-index: 103;
-  cursor: pointer;
+  
   transition: 300ms ease;
   display: flex;
   text-align: center;
@@ -462,7 +500,7 @@ a:hover{
 #node1.tree-node{
   position: absolute;
   top: 600px;
-  left: -36px;
+  left: -280%;
   height: 65px;
   width: 65px;
   border:2px solid none;
@@ -502,7 +540,7 @@ a:hover{
   left: 0%;
   
   width: 100%;
-  height: 350px;
+  height: 22vw;
   background: url("../image/McAfee.jpeg");
   background-size: 100% 100%;
   background-position: center center;
@@ -515,7 +553,7 @@ a:hover{
   left: 0%;
   
   width: 100%;
-  height: 350px;
+  height: 22vw;
   background: url("../image/bca.png");
   background-size: 100% 100%;
   background-position: center center;
@@ -526,7 +564,7 @@ a:hover{
   left: 0%;
   
   width: 100%;
-  height: 23vw;
+  height: 22vw;
   background: url("../image/uot.jpeg");
   background-size: 100% 100%;
   background-position: center center;
@@ -536,90 +574,117 @@ a:hover{
 }
 #at2.article-title{
   position:relative;
-  top: 20%;
-  left: 200px;
-  width: 20%;
+  top: 10vw;
+  left: 10%;
+  width: 63%;
   display: flex;
+  flex-direction: row;
   text-align: center;
   justify-content:center;
-  height: 50px;
-  padding:10px;
-  white-space:nowrap;
+  
+  padding:0;
+
   border-bottom: 1px solid black;
   font-weight: 800;
-  font-size: 20px;
+  font-size: 1.5vw;
 }
 #at3.article-title{
   position:relative;
-  top: 120px;
-  left: 200px;
-  width: 20%;
+  top: 10.5vw;
+  left: 10%;
+  width: 67%;
   display: flex;
   text-align: center;
   justify-content:center;
-  height: 50px;
-  padding:10px;
-  white-space:nowrap;
+ 
+  padding:0;
   border-bottom: 1px solid black;
   font-weight: 800;
-  font-size: 20px;
+  font-size: 1.5vw;
 }
 #at1.article-title{
   position:relative;
-  top: 140px;
-  left: 20%;
-  width: 40%;
+  top: 10vw;
+  left: 10%;
+  width: 50%;
   display: flex;
   text-align: center;
+  align-items: center;
   justify-content:center;
-  height: 50px;
-  padding:10px;
-  white-space:nowrap;
+  
+  
+  
+  
   border-bottom: 1px solid black;
   font-weight: 800;
-  font-size: 20px;
+  font-size: 1.5vw;
   
 }
-.article-title:before{
-  content: "";
-  position: relative;
-  left: 0;
-  top:0;
-  width: 40px;
-  height: 46px;
-  border-bottom: 1px solid white;
-  
-}
+
 #a3.article{
   z-index: 2;
   position: relative;
-  left: 40px;
-  top: 160px;
+  left: 10%;
+  top: 11.6vw;
   border: 0px solid black;
-  width: 100%;
+  width: 80%;
   display: flex;
   justify-content: left;
+  text-align: justify;
+
 }
 #a2.article{
   z-index: 2;
   position: relative;
-  left: 40px;
-  top: 160px;
-  border: 0px solid black;
-  width: 100%;
+  left: 10%;
+  top: 11vw;
+  border: 1px solid none;
+  width: 80%;
   display: flex;
   justify-content: left;
+  text-align: justify;
 }
 #a1.article{
   z-index: 2;
   position: relative;
-  left: 40px;
-  top: 160px;
+  left: 10%;
+  top: 11vw;
   border: 0px solid black;
-  width: 100%;
+  width: 80%;
   display: flex;
   justify-content: left;
-  
+  text-align: justify;
+  font-size: 1vw;
+}
+#atl.article{
+  color: white;
+  z-index: 2;
+  position: relative;
+  left: 10%;
+  top: 5vw;
+  border-left: 1px solid black;
+  border-right: 1px solid black;
+  padding: 1vw;
+  width: 26%;
+  display: flex;
+  justify-content: left;
+  text-align: justify;
+  font-size: 1vw;
+}
+#atr.article{
+  color: red;
+  z-index: 2;
+  position: absolute;
+  left: 65%;
+  top: 5vw;
+  border-left: 1px solid black;
+  border-right: 1px solid black;
+  padding: 1vw;
+  width: 25%;
+  display: flex;
+  justify-content: left;
+  text-align: justify;
+  font-size: 1vw;
 }
 #n1.tree-branch.expand{
   transform: translateY(-80px) scaleX(1);
@@ -634,14 +699,27 @@ a:hover{
   transform: translateY(-80px) scaleX(1);
   opacity: 1;
 }
+#tt.animated-text{
+  z-index: 2;
+  color: white !important;
+  padding-left: 6px;
+  
+  transform: scaleY(1);
+  opacity: 1;
+  font-size: 1vw;
+  font-weight: 100px !important;
+  transform-origin: left center;
+  transition: 50ms ease-in-out;
+  opacity: 1 !important;
+}
 .animated-text{
   z-index: 2;
   color: black;
   padding-left: 6px;
-  font-size: 16px;
+  
   transform: scaleY(1);
   opacity: 1;
-  font-size: 15px;
+  font-size: 1vw;
   font-weight: 100px !important;
   transform-origin: left center;
   transition: 50ms ease-in-out;
@@ -672,7 +750,7 @@ a:hover{
 #t1.time{
   position: relative;
   background: none;
-  height:20px;
+  
   width: 50%;
   padding: 0;
   z-index: 103;
@@ -688,7 +766,7 @@ a:hover{
 #T1.time-name{
   border: 1px solid none;
   
-  color: #2299d4;
+  color: #1c1ab1;
   font-size: 16px;
   display: flex;
   padding-left: 0vw;
@@ -697,9 +775,19 @@ a:hover{
   align-items: center;
   
 }
+#Nanjing-Time.glyphicon.glyphicon-time{
+  left: 0;
+  color: #1c1ab1;
+  display: flex;
+  border: 1px solid none;
+  justify-items:center;
+  align-items: center;
+  background: none;
+  font-size: 1vw;
+}
 #University-Time.glyphicon.glyphicon-time{
   left: 0;
-  color: #1b8cc0;
+  color: #1c1ab1;
   display: flex;
   border: 1px solid none;
   justify-items:center;
@@ -708,7 +796,7 @@ a:hover{
   font-size: 1vw;
 }
 .location-name{
-  color: #1b8cc0;
+  color: #1c1ab1;
   font-size: 1vw;
   display: flex;
   
@@ -723,7 +811,7 @@ a:hover{
   border: 1px solid none;
   position: relative;
   background: none;
-  height:20px;
+  
   width: 50%;
   left: 0vw;
   z-index: 103;
@@ -737,10 +825,32 @@ a:hover{
   top:0;
   
 }
+#PEY.infor-tag{
+  position: relative;
+  left: 0;
+  top: 11vw;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content:center;
+  align-items: center;
+  border: 1px solid none;
+}
+#high-school.infor-tag{
+  position: relative;
+  left: 0;
+  top: 10.5vw;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content:center;
+  align-items: center;
+  border: 1px solid none;
+}
 #University.infor-tag{
   position: relative;
   left:0%;
-  top:150px;
+  top:10.5vw;
   
   z-index: 0;
   border: 1px solid none;
@@ -750,6 +860,20 @@ a:hover{
   justify-content:center;
   align-items: center;
 }
+#Nanjing.glyphicon.glyphicon-map-marker{
+  position: relative;
+  background: none;
+  
+  padding: 0;
+  z-index: 103;
+  font-size: 1vw;
+  color: #1c1ab1;
+  z-index: 10;
+  
+  left:0%;
+  top:0px;
+  border: 1px solid none;
+}
 #Toronto.glyphicon.glyphicon-map-marker{
   position: relative;
   background: none;
@@ -757,7 +881,7 @@ a:hover{
   padding: 0;
   z-index: 103;
   font-size: 1vw;
-  color: #1b8cc0;
+  color: #1c1ab1;
   z-index: 10;
   
   left:0%;
