@@ -119,18 +119,14 @@ function change_background(){
     //console.log("in change background",$(".bg-experience").css("width"));
     if($(window).scrollTop() < 1 * $(window).height()){
         //console.log("switch background!!!");
-        $(".background").css("background", `url("image/IMG_portrait.jpeg")`);
-        $(".background").css("background-size", "cover");
-        $(".background").css("background-position", "80% 50%");
-        $(".background").css("transition", "0ms ease-in-out");
-        $(".background").css("opacity", `1`);
-        $(".background").css("background-repeat", "no-repeat");
+        $(".background2").css("z-index", `-11`);
+        $(".background").css("visibility", `visible`);
 
     }
     else if($(window).scrollTop() > 2 * $(window).height()){
-        $(".background").css("background", `url(image/Gessen-UToronto.jpeg)`);
-        $(".background").css("height", `100vh`);
-        $(".background").css("opacity", `0.2`);
+        $(".background2").css("z-index", `-9`);
+        $(".background").css("visibility", `hidden`);
+        $(".background2").css("visibility", `visible`);
     }
     
 }
@@ -151,19 +147,19 @@ function crop_top_bottom(){
     //console.log("lower cover bottom:", $('#lower').css('bottom'));
     if(viewportTop   > tree_top + 10  && viewportBottom <  tree_bottom ){
         $(".main-branch").css('position', `fixed`);
-        $(".main-branch").css('top', `120px`);
-        $(".main-branch").css('height', `700px`);
+        $(".main-branch").css('top', `20vh`);
+        $(".main-branch").css('height', `90vh`);
         
     }
     else if(viewportTop  <= tree_top + 250){
         $(".main-branch").css('position', `absolute`);
-        $(".main-branch").css('top', `250px`);
-        $(".main-branch").css('height', `700px`);
+        $(".main-branch").css('top', `35vh`);
+        $(".main-branch").css('height', `90vh`);
     }
     else{
         $(".main-branch").css('position', `fixed`);
-        $(".main-branch").css('top', `${120}px`);
-        $(".main-branch").css('height', `${700}px`);
+        $(".main-branch").css('top', `${20}vh`);
+        $(".main-branch").css('height', `90vh`);
     }
 }
 
@@ -173,13 +169,13 @@ function extand(){
     var viewportBottom = viewportTop + $(window).height();
     var item_pos = $("#node1").offset().top + $("#node1").outerHeight();
     //console.log(viewportMiddle, "and", item_pos);
-    if(item_pos < viewportBottom - 100 && item_pos > viewportTop + 150){
+    if(item_pos < viewportBottom - 100 && item_pos > viewportTop){
         $("#node1").addClass("appear");
     }
     else{
         $("#node1").removeClass("appear");
     }
-    if(item_pos < viewportMiddle + 250 && item_pos > viewportMiddle - 240) {
+    if(item_pos < viewportMiddle + 250 && item_pos > viewportTop) {
         $("#n1").addClass("expand");
         
         //console.log($("#n1"));
@@ -188,27 +184,27 @@ function extand(){
         $("#n1").removeClass("expand");
     }
     var item2_pos = $("#node2").offset().top + $("#node2").outerHeight();
-    if(item2_pos < viewportBottom - 100 && item2_pos > viewportTop + 150){
+    if(item2_pos < viewportBottom - 100 && item2_pos > viewportTop ){
         $("#node2").addClass("appear");
     }
     else{
         $("#node2").removeClass("appear");
     }
-    if(item2_pos < viewportMiddle + 250 && item2_pos > viewportMiddle - 240) {
+    if(item2_pos < viewportMiddle + 250 && item2_pos > viewportTop -340) {
         $("#n2").addClass("expand");
         //console.log($("#n2"));
     }
     else{
         $("#n2").removeClass("expand");
     }
-    var item2_pos = $("#node3").offset().top + $("#node2").outerHeight();
-    if(item2_pos < viewportBottom - 100 && item2_pos > viewportTop + 150){
+    var item2_pos = $("#node3").offset().top + $("#node3").outerHeight();
+    if(item2_pos < viewportBottom  && item2_pos > viewportTop ){
         $("#node3").addClass("appear");
     }
     else{
         $("#node3").removeClass("appear");
     }
-    if(item2_pos < viewportMiddle + 250 && item2_pos > viewportMiddle - 240) {
+    if(item2_pos < viewportMiddle + 250 && item2_pos > viewportTop - 340) {
         $("#n3").addClass("expand");
         //console.log($("#n2"));
     }
@@ -226,6 +222,7 @@ window.onscroll = function(){
     crop_top_bottom();
     extand();
 };
+
 
 
 
