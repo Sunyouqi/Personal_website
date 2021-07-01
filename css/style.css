@@ -151,9 +151,25 @@ a:hover{
     
     background: url("../image/IMG_portrait.jpeg");
     background-size: cover; 
-    background-position:70% 50%;
+    background-position:80% 50%;
     background-repeat: no-repeat;
     opacity: 1;
+    height: 100vh;
+    width:100%;
+}
+
+.background2{
+    z-index: -10;
+    position:fixed;
+    top:0;
+    left:0;
+    
+    visibility: hidden;
+    background: url("../image/Gessen-UToronto.jpeg");
+    background-size: cover;
+    background-position:30% 0%;
+    background-repeat: no-repeat;
+    opacity: 0.2;
     height: 100vh;
     width:100%;
 }
@@ -1258,7 +1274,7 @@ h1{
   height: 30px;
   position: relative;
   border: 4px solid #fff;
-  
+  border-radius: 20%;
   animation: loader 2s infinite ease;
 }
 
