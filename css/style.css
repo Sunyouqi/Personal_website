@@ -669,7 +669,8 @@ a:hover{
   display: flex;
   justify-content: left;
   text-align: justify;
-  font-size: 1vw;
+  
+  
 }
 #atr.article{
   color: red;
@@ -707,6 +708,21 @@ a:hover{
   transform: scaleY(1);
   opacity: 1;
   font-size: 1vw;
+  line-height: 1.6;
+  font-weight: 100px !important;
+  transform-origin: left center;
+  transition: 50ms ease-in-out;
+  opacity: 1 !important;
+}
+#tt2.animated-text{
+  z-index: 2;
+  color: white !important;
+  padding-left: 6px;
+  
+  transform: scaleY(1);
+  opacity: 1;
+  font-size: 1vw;
+  line-height: 1.4;
   font-weight: 100px !important;
   transform-origin: left center;
   transition: 50ms ease-in-out;
