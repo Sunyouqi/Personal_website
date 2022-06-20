@@ -210,7 +210,7 @@ a:hover{
   position: relative;
   top: 10px;
   left: 20px;
-  height: 30px;
+  height: 4vh;
   width: 90%;
   display: flex;
   justify-content: space-between;
@@ -220,7 +220,8 @@ a:hover{
 }
 .skill-name{
   border: 1px solid none;
-  font-size: 16px;
+  font-size: 1.5vh;
+  font-weight:bold;
 }
 .column-1{
   position:absolute;
